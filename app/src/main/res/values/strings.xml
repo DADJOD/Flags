@@ -3,4 +3,7 @@
     <string name="_1490">$ 1490</string>
     <string name="_10_11">10 дней 11 ночей</string>
     <string name="abc">Алмата-Мале-Алмата</string>
+    <string name="exit">Exit</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
 </resources>
