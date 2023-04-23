@@ -6,15 +6,39 @@ import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.PopupMenu
 import com.google.android.material.snackbar.Snackbar
 
-class CoordinatorActivity : AppCompatActivity() {
+class CoordinatorActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListener,
+    View.OnClickListener {
+    private var popupMenu: PopupMenu? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_coordinator)
 
         registerForContextMenu(findViewById(R.id.cost))
+
+        popupMenu = PopupMenu(this, findViewById(R.id.country))
+        popupMenu!!.inflate(R.menu.popup)
+        popupMenu!!.setOnMenuItemClickListener(this)
+
+        findViewById<TextView>(R.id.country).setOnClickListener(this)
+    }
+
+    override fun onClick(v: View?) {
+        popupMenu?.show()
+    }
+
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        return when (item?.itemId) {
+            R.id.popup_menu_clear -> {
+                Toast.makeText(this, "Popup Menu pressed", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> false
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
