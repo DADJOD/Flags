@@ -14,9 +14,9 @@
         android:text="@string/action" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
         android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:menu="@menu/bottom"
-        android:layout_height="wrap_content"/>
+        app:menu="@menu/bottom" />
 </FrameLayout>
