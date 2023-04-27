@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom.home"
+        android:icon="@drawable/baseline_sentiment_satisfied_alt_24"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/bottom.git"
+        android:icon="@drawable/baseline_settings_input_svideo_24"
+        android:title="@string/git" />
+
+    <item
+        android:id="@+id/bottom.svn"
+        android:icon="@drawable/baseline_severe_cold_24"
+        android:title="@string/svn" />
+</menu>

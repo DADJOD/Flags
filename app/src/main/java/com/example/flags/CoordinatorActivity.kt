@@ -25,7 +25,10 @@ class CoordinatorActivity : AppCompatActivity(), PopupMenu.OnMenuItemClickListen
         popupMenu!!.setOnMenuItemClickListener(this)
 
         findViewById<TextView>(R.id.country).setOnClickListener(this)
+
     }
+
+//    invalidateOptionsMenu()
 
     override fun onClick(v: View?) {
         popupMenu?.show()

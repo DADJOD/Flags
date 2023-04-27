@@ -6,4 +6,8 @@
     <string name="exit">Exit</string>
     <string name="copy">Copy</string>
     <string name="clear">Clear</string>
+    <string name="home">Home</string>
+    <string name="git">GIT</string>
+    <string name="svn">SVN</string>
+    <string name="action">Action</string>
 </resources>
